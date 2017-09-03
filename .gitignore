@@ -1,4 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+/.project
+/.pydevproject
 /.idea/
 /ch8/*.png
 /ch8/*.jpg
