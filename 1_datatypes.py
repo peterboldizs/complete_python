@@ -12,9 +12,9 @@ print(True and False)
 print(True or False)
 
 print("Numeric types")
-print(7/4)
-print(7//4)
-print(7%4)
+print(7 / 4)
+print(7 // 4)
+print(7 % 4)
 print(3 * 0.1 - 0.3)
 c = 3.14 + 2.73j
 d = 1 + 1j

@@ -42,6 +42,10 @@ ba2.replace(b'p', b'L')
 print(ba2)
 print(ba2.upper())
 
+ba3 = ba2.replace(b'p', b'L')
+print(ba3)
+print(ba3.upper())
+
 print("Set")
 s = set()
 s.add(2)
