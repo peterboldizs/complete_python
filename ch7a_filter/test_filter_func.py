@@ -1,12 +1,12 @@
 from unittest import TestCase
 from unittest.mock import patch, call
 from nose.tools import assert_equal, assert_list_equal
-from ch7.filter_func import filter_ints, is_positive
+from ch7a_filter.filter_func import filter_ints, is_positive
 
 
 class FilterIntsTestCase(TestCase):
 
-    @patch('ch7.filter_func.is_positive')
+    @patch('filter_func.is_positive')
     def test_filter_ints(self, is_positive_mock):
         v = [3, -4, 0, 5, 8]
         filter_ints(v)
