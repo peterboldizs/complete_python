@@ -53,3 +53,13 @@ str6 = "This is the beginning of a beautiful frienship"
 print(str6[2:34:3])
 print(str6[::-1])
 
+print('string formatting')
+age = 24
+print("my age is " + str(age))
+print("my age is {0}".format(age))
+print("my age is %d" % age)
+print("""
+Jan: {2}
+Feb: {0}
+Mar: {1}
+""".format(28,30,31))
