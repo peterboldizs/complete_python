@@ -20,6 +20,7 @@ else:
 taxed_pay = pay - (pay * tax)
 print("pay: {0}, tax:  {1},  taxed_pay: {2}".format(pay, tax, taxed_pay))
 
+myname = input("what is your name: ")
 age = int(input("how old are you: "))
 if (age >= 16) and (age <= 65):
     print("adult")
@@ -27,10 +28,18 @@ else:
     print("student")
     
 
-if 18 < age < 25:
-    print("university")
+if 18 <= age < 31:
+    print("welcome to the trip, {}".format(myname))
 else:
-    print("other")
+    print("you cannot com to the trip")
 
 if (age < 16) or (age > 65):
     print("free time")
+
+letter = input("enter a letter: ")
+if letter in myname:
+    print("I have {} in my name".format(letter))
+else:
+    print("I do not have {} in my name".format(letter))
+
+
