@@ -2,37 +2,39 @@
 
 print("Tuple")
 te = ()
-t = (1,2,3,4,5)
+t = (1, 2, 3, 4, 5)
 print(type(t))
 print(3 in t)
-a,b = 1,2
-print(a,b)
-a,b = b,a
-print(a,b)
+a, b = 1, 2
+print(a, b)
+a, b = b, a
+print(a, b)
 
 print("List")
 le = []
-l = [1,2,3]
-for x in l:
+my_list = [1, 2, 3]
+for x in my_list:
     print(x)
-print([x + 5 for x in l])
-l.append(12)
-print(l)
-l.extend([1,1,5,7])
-print(l)
-print(l.count(1))
-l.insert(0,11)
-print(l.index(12))
-print(l.pop())
-print(l.pop())
-l.reverse()
-l.sort()
-print(l)
-l2 = [5,6,7,8]
-l3 = l + l2
-print(l3)
-l4 = l2 *2
-print(l4, len(l4))
+
+print([x + 5 for x in my_list])
+
+my_list.append(12)
+print(my_list)
+my_list.extend([1, 1, 5, 7])
+print(my_list)
+print(my_list.count(1))
+my_list.insert(0, 11)
+print(my_list.index(12))
+print(my_list.pop())
+print(my_list.pop())
+my_list.reverse()
+my_list.sort()
+print(my_list)
+my_list2 = [5, 6, 7, 8]
+my_list3 = my_list + my_list2
+print(my_list3)
+my_list4 = my_list2 * 2
+print(my_list4, len(my_list4))
 
 print("bytearray")
 ba = bytearray(range(5))
@@ -47,35 +49,36 @@ print(ba3)
 print(ba3.upper())
 
 print("Set")
-s = set()
-s.add(2)
-s.add(3)
-s.add(5)
-s.add(7)
-print(s)
-s.add(1)
-print(s)
-s.remove(1)
-print(3 in s)
-print(4 in s)
-s.add(3)
-print(s)
-s2 = set([7,11,13,17])
-print(s | s2)
-print(s & s2)
-print(s - s2)
-s3 = {2,3,3,5,5,7}
-print(s3)
+my_set = set()
+my_set.add(2)
+my_set.add(3)
+my_set.add(5)
+my_set.add(7)
+print(my_set)
+my_set.add(1)
+print(my_set)
+my_set.remove(1)
+print(3 in my_set)
+print(4 in my_set)
+my_set.add(3)
+print(my_set)
+#  my_set2 = set([7, 11, 13, 17])
+my_set2 = [7, 11, 13, 17]
+print(my_set | my_set2)
+print(my_set & my_set2)
+print(my_set - my_set2)
+my_set3 = {2, 3, 3, 5, 5, 7}
+print(my_set3)
 
 print("Dictionary")
 da = dict(a=1, z=-1)
 db = {'a': 1, 'z': -1}
 dc = dict(zip(['a', 'z'], [1, -1]))
-dd = dict([('a',1), ('z', -1)])
+dd = dict([('a', 1), ('z', -1)])
 print(da, db)
 print(da == db == dc == dd)
 
-z = list(zip('hello', range(1,6)))
+z = list(zip('hello', range(1, 6)))
 print("zipped: ", z)
 da['c'] = 5
 print(da, len(da))
