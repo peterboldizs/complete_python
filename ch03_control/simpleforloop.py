@@ -14,10 +14,19 @@ numbers = "234,567,789,0"
 cleanNum = ''
 for i in range(0, len(numbers)):
     if numbers[i] in "0123456789":
-        cleanNum = cleanNum + numbers[i]
+        #cleanNum = cleanNum + numbers[i]
+        cleanNum += numbers[i] #augmented assignment
 print("\ncleaned number: {}".format(cleanNum))
 
 cleanNumber = int(cleanNum)
 minus1000 = cleanNumber - 1000
 print("minus 1000 : {}".format(minus1000))
 
+num = 5
+mul = 8
+ans = 0
+
+for i in range(mul):
+    ans += num
+
+print(ans)

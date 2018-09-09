@@ -4,24 +4,27 @@ print("advanced for")
 names = ['peter', 'marti', 'david', 'dori', 'anna']
 ages = [47, 46, 17, 16, 11]
 
+print("\nprint arrays")
 for pos in range(len(names)):
     # print(pos, names[pos][0])
     print(pos, names[pos], ages[pos]+1)
 
+print("\nprint enumerate")
 for pos, name in enumerate(names):
     age = ages[pos]
     print(pos, name, age)
 
+print("\nprint zip 1")
 for name, age in zip(names, ages):
     print(name, age)
 
+print("\nprint zip 2")
 for data in zip(names, ages):
     name, age = data
     print(name, age)
 
 print("\nbreak and continue")
-
-print("\ndiscount")
+print("discount")
 today = date.today()
 tomorrow = today + timedelta(days=1)
 prods = [
@@ -51,13 +54,14 @@ else:
     print("no luck...")
 
 
-numbers = "234,567,789,765.765"
 for name in names:
     if name == "peter":
         print("Ignoring {}".format(name))
         continue
     print(name)
 
+
+numbers = "234,567,789,765.765"
 cleanCharset = ''
 for ch in numbers:
     if ch in ",":

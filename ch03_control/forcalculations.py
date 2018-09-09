@@ -1,4 +1,5 @@
 from itertools import count, permutations
+
 print("calculations using for loop")
 print("primes")
 primes = []
@@ -9,12 +10,12 @@ for n in range(2, upto + 1):
         if n % divisor == 0:
             # is_prime = False
             break
-    # if is_prime - it executes only if there was no break
-    else:
+    else: # if is_prime - it executes only if there was no break
         primes.append(n)
 print(primes)
 
 print("discounts")
+
 discount = {
     'f20': (0.0, 20.0),
     'f40': (0.0, 40.0),
@@ -34,9 +35,6 @@ for cust in customers:
     percent, fixed = discount.get(code, (0.0, 0.0))
     cust['discount'] = percent * cust['total'] + fixed
     print(cust['id'], cust['total'], cust['discount'])
-
-# for c in customers:
-#     print(c['id'], c['total'], c['discount'])
 
 for n in count(5, 2):
     if n > 20:
