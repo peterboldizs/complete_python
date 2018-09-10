@@ -1,4 +1,4 @@
-print("All about list")
+print("All about lists")
 le1 = []
 le2 = list()
 le3 = le1
