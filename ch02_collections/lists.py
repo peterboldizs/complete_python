@@ -57,3 +57,15 @@ print(my_list5, len(my_list5))
 print("list of lists")
 my_list6 = [my_list4, my_list5]
 print(my_list6)
+
+print("bytearray operations")
+ba = bytearray(range(5))
+print(ba)
+ba2 = bytearray(b'peter')
+ba2.replace(b'p', b'L')
+print(ba2)
+print(ba2.upper())
+
+ba3 = ba2.replace(b'p', b'L')
+print(ba3)
+print(ba3.upper())
