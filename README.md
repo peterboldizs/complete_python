@@ -1,1 +1,2 @@
-This is the code for studying the great book Learning Python by Fabrizio Romano
+This repository contains code exercises for Python basics.
+It also covers advanced study material.
