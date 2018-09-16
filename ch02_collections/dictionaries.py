@@ -39,3 +39,8 @@ print("new str by join: {}".format(my_str2))
 letters = "qwertz"
 my_str3 = my_str2.join(letters)
 print(my_str3)
+
+print("split words")
+sentence = input("enter your sentence:")
+words = sentence.split()
+print("you entered {} words: {}".format(len(words), words))
