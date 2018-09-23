@@ -3,3 +3,25 @@
 /.pydevproject
 /.idea/
 
+10_io/binfile
+10_io/binfile2
+10_io/locations.bak
+10_io/locations.dat
+10_io/locations.dir
+10_io/mylists.bak
+10_io/mylists.dat
+10_io/mylists.dir
+10_io/names.txt
+10_io/person.txt
+10_io/person2.pickle
+10_io/person3.pickle
+10_io/shelve_test.bak
+10_io/shelve_test.dat
+10_io/shelve_test.dir
+10_io/shelve_test2.bak
+10_io/shelve_test2.dat
+10_io/shelve_test2.dir
+10_io/vocabulary.bak
+10_io/vocabulary.dat
+10_io/vocabulary.dir
+
