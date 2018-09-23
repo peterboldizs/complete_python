@@ -1,0 +1,19 @@
+Repo
+git@github.com:peterboldizs/springbootdemo.git
+https://github.com/peterboldizs/springbootdemo.git
+APM API
+http://10.54.181.63:8080/env
+http://10.54.181.63:8080/metrics
+http://10.54.181.63:8080/configprops
+http://10.54.181.63:8080/trace
+http://10.54.181.63:8080/dump
+http://10.54.181.63:8080/auditevents
+Business API
+Mapped "{[/api/sayHello/{userName}],methods=[GET]}" onto public com.example.bpdemo.Greeting com.example.bpdemo.BpRestController.sayHello(java.lang.String)
+Mapped "{[/api/sayGoodbye],methods=[GET]}" onto public com.example.bpdemo.Greeting com.example.bpdemo.BpRestController.sayGoodbye(java.lang.String)
+Mapped "{[/api/cube/{num}],methods=[POST]}" onto public java.lang.String com.example.bpdemo.BpRestController.cube(int)
+Mapped "{[/api/square/{num}]}" onto public java.lang.String com.example.bpdemo.BpRestController.square(int)
+Examples:
+http://10.54.181.63:8080//api/sayHello/Peter
+http://10.54.181.63:8080/api/sayGoodbye?userName=Peter
+http://10.54.181.63:8080//api/square/5

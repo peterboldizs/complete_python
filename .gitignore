@@ -2,14 +2,4 @@
 /.project
 /.pydevproject
 /.idea/
-/ch8/*.png
-/ch8/*.jpg
-/ch8/images.json
-ch8/img1.jpg
-ch8/img2.jpg
-ch8/img3.png
-ch8/img4.png
-ch8/simple_server/img/
-/.ipynb_checkpoints/
-ch9/ch9.ipynb
-/ch11.log
+
