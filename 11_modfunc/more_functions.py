@@ -2,11 +2,6 @@ import math
 import tkinter
 
 
-def parabola(x):
-    y = x * x
-    return y
-
-
 def parabola2(page, size):
     for x in range(size):
         y = x * x / size
@@ -15,12 +10,17 @@ def parabola2(page, size):
 
 
 def circle(page, radius, g, h):
-    for x in range(g, g + radius):
+    for x in range(g * 10, (g + radius) * 10):
+        x /= 10
         y = h + (math.sqrt(radius ** 2 - ((x - g) ** 2)))
         plot(page, x, y)
         plot(page, x, 2 * h - y)
         plot(page, 2 * g - x, y)
         plot(page, 2 * g - x, 2 * h - y)
+
+
+def circle2(page, radius, g, h, color='red'):
+    page.create_oval(g + radius, h + radius, g - radius, h - radius, outline=color, width=2)
 
 
 def draw_axes(page):
@@ -37,10 +37,6 @@ def plot(page, x, y):
     page.create_line(x, -y, x + 1, -y + 1, fill="red")
 
 
-for i in range(-10, 10):
-    j = parabola(i)
-    print("{} -> {}".format(i, j))
-
 main_window = tkinter.Tk()
 main_window.title("Parabola")
 main_window.geometry("640x480")
@@ -53,5 +49,7 @@ print(repr(canvas))
 parabola2(canvas, 100)
 parabola2(canvas, 200)
 circle(canvas, 100, 100, 100)
+circle2(canvas, 50, 50, 50, color='blue')
+circle2(canvas, 75, 0, 0)
 
 main_window.mainloop()
