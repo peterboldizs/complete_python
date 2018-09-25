@@ -1,5 +1,7 @@
 import tkinter
 
+# this is the same as tkinterdemo but uses grid instead of pack
+
 print(tkinter.TkVersion)
 print(tkinter.TclVersion)
 
