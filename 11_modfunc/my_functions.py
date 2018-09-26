@@ -4,6 +4,17 @@ def center_text(text):
     print("_" * left_margin, text)
 
 
+def _center_text(text):
+    """
+    protected
+    :param text:
+    :return:
+    """
+    text = str(text)
+    left_margin = (45 - len(text)) // 2
+    print("_" * left_margin, text)
+
+
 def centre_text2(*args):
     """
     text centering function with variable arguments
@@ -46,22 +57,23 @@ def center_text4(text):
     return "_" * left_margin + text
 
 
-print("*" * 40)
-center_text("This is my text")
-center_text("this is a somewhat longer text")
-center_text("short text")
-center_text(123)
+if __name__ == "__main__":
+    print("*" * 40)
+    center_text("This is my text")
+    center_text("this is a somewhat longer text")
+    center_text("short text")
+    center_text(123)
 
-print("*" * 40)
-centre_text2("this is a text", "short text", 123)
-print("*" * 40)
-centre_text3("this is a text", "short text", 123)
-centre_text3("this is a text", "short text", 123, sep=':')
+    print("*" * 40)
+    centre_text2("this is a text", "short text", 123)
+    print("*" * 40)
+    centre_text3("this is a text", "short text", 123)
+    centre_text3("this is a text", "short text", 123, sep=':')
 
-with open("textfile.txt", mode='w') as destination_file:
-    centre_text3("this is a text", "short text", 123, sep=':', dest_file=destination_file)
+    with open("textfile.txt", mode='w') as destination_file:
+        centre_text3("this is a text", "short text", 123, sep=':', dest_file=destination_file)
 
-print("*" * 40)
-print(center_text4("my text to print"))
-s4 = center_text4("assign to a variable")
-print(s4)
+    print("*" * 40)
+    print(center_text4("my text to print"))
+    s4 = center_text4("assign to a variable")
+    print(s4)
