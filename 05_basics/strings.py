@@ -62,4 +62,11 @@ print("""
 Jan: {2}
 Feb: {0}
 Mar: {1}
-""".format(28,30,31))
+""".format(28, 30, 31))
+
+str11 = "this is \nnew line\t\ttabbed"
+raw_string = r"this is \nnew line\t\ttabbed"
+b_string = "this is" + chr(10) + "new line " + chr(9) + chr(9) + "tabbed"
+print(str11)
+print(raw_string)
+print(b_string)
