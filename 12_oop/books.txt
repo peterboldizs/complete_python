@@ -1,3 +1,4 @@
-Maigret on Vacation	Georges Simenon	195
-Poirots Christmas	Agatha Christie	234
-Sherlock Holmes	Arthur Conan Doyle	222
+Maigret on Vacation,Georges Simenon,195
+Poirots Christmas,Agatha Christie,234
+Sherlock Holmes,Arthur Conan Doyle,222
+Murder at the Orient Express,Agatha Christie,223

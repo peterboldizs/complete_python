@@ -48,7 +48,7 @@ def load_data():
     library = Library(ownername='Anna')
     with open('books.txt', 'r') as books:
         for line in books:
-            title, author, pages = tuple(line.strip('\n').split('\t'))
+            title, author, pages = tuple(line.strip('\n').split(','))
             pages = int(pages)
             # print(title, author, pages)
             book = Book(title, author, pages)
