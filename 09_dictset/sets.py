@@ -44,7 +44,7 @@ my_set4.add("C")
 
 for i in my_set4:
     print(i)
-    
+
 print("union: {}".format(my_set4.union(my_set5)))
 print("sorted union: {}".format(sorted(my_set4.union(my_set5))))
 print("intersection: {}".format(my_set2.intersection(my_set3)))

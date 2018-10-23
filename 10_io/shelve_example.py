@@ -12,8 +12,8 @@ with shelve.open("shelve_test") as person:
 print("shelve with dict")
 with shelve.open("shelve_test2") as person2:
     person2 = {"fname": "Peter",
-              "lname": "Boldizs",
-              "byear": 1970}
+               "lname": "Boldizs",
+               "byear": 1970}
     print(person2)
     while True:
         dict_key = input("enter attribute (q to quit):")

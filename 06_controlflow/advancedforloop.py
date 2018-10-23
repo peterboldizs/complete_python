@@ -7,7 +7,7 @@ ages = [47, 46, 17, 16, 11]
 print("\nprint arrays")
 for pos in range(len(names)):
     # print(pos, names[pos][0])
-    print(pos, names[pos], ages[pos]+1)
+    print(pos, names[pos], ages[pos] + 1)
 
 print("\nprint enumerate")
 for pos, name in enumerate(names):
@@ -53,13 +53,11 @@ if found:
 else:
     print("no luck...")
 
-
 for name in names:
     if name == "peter":
         print("Ignoring {}".format(name))
         continue
     print(name)
-
 
 numbers = "234,567,789,765.765"
 cleanCharset = ''
@@ -69,7 +67,6 @@ for ch in numbers:
     cleanCharset = cleanCharset + ch
 
 print("cleaned character set: {}".format(cleanCharset))
-
 
 for data in zip(names, ages):
     name, age = data

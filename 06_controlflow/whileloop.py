@@ -2,7 +2,7 @@ import random
 
 print("simplest while loop")
 i = 0
-while(i < 5):
+while i < 5:
     print("i is {}".format(i))
     i += 1
 
@@ -13,7 +13,7 @@ while chosen not in options:
     if chosen == "q":
         print("game over")
         break
-else: # if there was no break
+else:  # if there was no break
     print("Thanks for choosing: {}".format(chosen))
 
 n = 27
@@ -57,4 +57,3 @@ while guess != answer:
         print("guess higher")
     else:
         print("well done")
-              

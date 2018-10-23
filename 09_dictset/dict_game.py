@@ -26,7 +26,7 @@ locations = {0: {"desc": "You are sitting in front of a computer learning Python
                  "exits": {"W": 2, "S": 1, "Q": 0},
                  "namedExits": {"2": 2, "1": 1}}
              }
- 
+
 vocabulary = {"QUIT": "Q",
               "NORTH": "N",
               "SOUTH": "S",
@@ -37,30 +37,30 @@ vocabulary = {"QUIT": "Q",
               "BUILDING": "3",
               "VALLEY": "4",
               "FOREST": "5"}
- 
+
 loc = 1
 while True:
     availableExits = ", ".join(locations[loc]["exits"].keys())
- 
+
     print(locations[loc]["desc"])
- 
+
     if loc == 0:
         break
     else:
         allExits = locations[loc]["exits"].copy()
         allExits.update(locations[loc]["namedExits"])
- 
+
     direction = input("Available exits are " + availableExits).upper()
     print()
- 
+
     # Parse the user input, using our vocabulary dictionary if necessary
     if len(direction) > 1:  # more than 1 letter, so check vocab
         words = direction.split()
         for word in words:
-            if word in vocabulary:   # does it contain a word we know?
+            if word in vocabulary:  # does it contain a word we know?
                 direction = vocabulary[word]
                 break
- 
+
     if direction in allExits:
         loc = allExits[direction]
     else:

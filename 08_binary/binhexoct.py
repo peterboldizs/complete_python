@@ -1,7 +1,7 @@
 print("binary")
 for i in range(17):
     print("{0:>2} in binary: {0:>08b}".format(i))
-    
+
 print("hex")
 for i in range(17):
     print("{0:>2} in hex: {0:>02x}".format(i))
@@ -32,4 +32,3 @@ for power in powers:
     if printing:
         print(bit, end='')
     x %= power
-        

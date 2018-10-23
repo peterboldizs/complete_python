@@ -1,3 +1,5 @@
+print("this program demonstrates different factorials and Fibonacci calculations")
+print("*" * 40)
 def fact(n):
     result = 1
     if n > 1:

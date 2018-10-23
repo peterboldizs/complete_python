@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 import sys
-from fractions import Fraction
 from decimal import Decimal as D
+from fractions import Fraction
 
 print(sys.version)
-print("float_info",sys.float_info)
+print("float_info", sys.float_info)
 
 print(True and True)
 print(True and False)
@@ -21,14 +21,13 @@ d = 1 + 1j
 print(c.real)
 print(c.imag)
 print(c.conjugate())
-print(c-d)
-f = Fraction(10,6)
+print(c - d)
+f = Fraction(10, 6)
 print(f)
 print(f.numerator, f.denominator)
-print(Fraction(2,3) + Fraction(1,3))
+print(Fraction(2, 3) + Fraction(1, 3))
 
 d = D(3.14)
 print(d)
 print(D(0.1) * D(3) - D(0.3))
 print(D('0.1') * D(3) - D('0.3'))
-

@@ -26,7 +26,6 @@ if (age >= 16) and (age <= 65):
     print("adult")
 else:
     print("student")
-    
 
 if 18 <= age < 31:
     print("welcome to the trip, {}".format(myname))
@@ -41,5 +40,3 @@ if letter in myname:
     print("I have {} in my name".format(letter))
 else:
     print("I do not have {} in my name".format(letter))
-
-

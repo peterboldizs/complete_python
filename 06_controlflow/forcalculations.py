@@ -10,7 +10,7 @@ for n in range(2, upto + 1):
         if n % divisor == 0:
             # is_prime = False
             break
-    else: # if is_prime - it executes only if there was no break
+    else:  # if is_prime - it executes only if there was no break
         primes.append(n)
 print(primes)
 
