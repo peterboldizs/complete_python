@@ -38,5 +38,7 @@ try:
 except ZeroDivisionError:
     print("you should not divide by zero")
     sys.exit(2)
+else:  # only if there is no exception
+    print("in else: divide success")
 finally:
     print("finally always runs")

@@ -38,6 +38,9 @@ class Duck(Bird):
 
 class Penguin(Bird):
 
+    def __init__(self):
+        self.fly = self.aviate
+
     def walk(self):
         print("Waddle, waddle, I waddle too")
 
@@ -47,8 +50,42 @@ class Penguin(Bird):
     def quack(self):
         print("Are you 'avin' a larf? I'm a penguin!")
 
+    def aviate(self):
+        print("penguins can also fly")
 
-def test_bird(bird):
+
+class Mallard(Duck):
+    pass
+
+
+class Flock(object):
+
+    def __init__(self):
+        self.flock = []
+
+    def add_duck(self, duck: Duck) -> None:
+        # if type(duck) is Duck:
+        print("adding {} to flock".format(type(duck)))
+        fly_method = getattr(duck, 'fly', None)
+        if callable(fly_method):
+            self.flock.append(duck)
+
+    #   else:
+    #       raise TypeError("cannot add {} to flock".format(str(type(duck).__name__)))
+
+    def migrate(self):
+        problem = None
+        for duck in self.flock:
+            try:
+                print("try to make {} fly".format(type(duck)))
+                duck.fly()
+            except AttributeError as ae:
+                problem = ae
+        if problem:
+            raise problem
+
+
+def simulate_bird(bird):
     bird.walk()
     bird.swim()
     bird.quack()
@@ -56,8 +93,24 @@ def test_bird(bird):
 
 if __name__ == '__main__':
     donald = Duck()
-    test_bird(donald)
+    simulate_bird(donald)
     donald.fly()
 
     percy = Penguin()
-    test_bird(percy)
+    simulate_bird(percy)
+
+    print("-" * 40)
+    print("migration simulation")
+    d1 = Duck()
+    d2 = Duck()
+    d3 = Duck()
+    m1 = Mallard()
+
+    flock = Flock()
+    flock.add_duck(d1)
+    flock.add_duck(d2)
+    flock.add_duck(d3)
+    flock.add_duck(percy)
+    flock.add_duck(m1)
+
+    flock.migrate()
