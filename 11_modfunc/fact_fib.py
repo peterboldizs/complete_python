@@ -1,5 +1,7 @@
 print("this program demonstrates different factorials and Fibonacci calculations")
 print("*" * 40)
+
+
 def fact(n):
     result = 1
     if n > 1:
@@ -45,11 +47,11 @@ print("recursive factorial")
 for k in range(10):
     print("{}! is {}".format(k, factorial(k)))
 
-print("recursive fibonacci")
-# much slower
-for l in range(20):
-    print(fibo(l), end=' ')
-
 print("\niterative fibonacci")
-for m in range(20):
-    print(fibonacci(m), end=' ')
+for m in range(10):
+    print(fibonacci(m))
+
+print("\nrecursive fibonacci")
+# much slower
+for l in range(10):
+    print(fibo(l))

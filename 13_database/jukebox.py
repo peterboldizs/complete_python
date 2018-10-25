@@ -1,22 +1,14 @@
 import sqlite3
-
-try:
-    import tkinter
-except ImportError:  # python 2
-    import Tkinter as tkinter
+import tkinter
 
 
 class Scrollbox(tkinter.Listbox):
 
     def __init__(self, window, **kwargs):
-        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2
         super().__init__(window, **kwargs)
-
         self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL, command=self.yview)
 
     def grid(self, row, column, sticky='nsw', rowspan=1, columnspan=1, **kwargs):
-        # tkinter.Listbox.grid(self, row=row, column=column, sticky=sticky, rowspan=rowspan,
-        #  **kwargs)  # Python 2
         super().grid(row=row, column=column, sticky=sticky, rowspan=rowspan, columnspan=columnspan, **kwargs)
         self.scrollbar.grid(row=row, column=column, sticky='nse', rowspan=rowspan)
         self['yscrollcommand'] = self.scrollbar.set
@@ -25,19 +17,14 @@ class Scrollbox(tkinter.Listbox):
 class DataListBox(Scrollbox):
 
     def __init__(self, window, connection, table, field, sort_order=(), **kwargs):
-        # Scrollbox.__init__(self, window, **kwargs)  # Python 2
         super().__init__(window, **kwargs)
-
         self.linked_box = None
         self.link_field = None
         self.link_value = None
-
         self.cursor = connection.cursor()
         self.table = table
         self.field = field
-
         self.bind('<<ListboxSelect>>', self.on_select)
-
         self.sql_select = "SELECT " + self.field + ", _id" + " FROM " + self.table
         if sort_order:
             self.sql_sort = " ORDER BY " + ','.join(sort_order)
@@ -113,33 +100,26 @@ if __name__ == '__main__':
     artistList = DataListBox(mainWindow, conn, "artists", "name")
     artistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))
     artistList.config(border=2, relief='sunken')
-
     artistList.requery()
 
     # ===== Albums Listbox =====
     albumLV = tkinter.Variable(mainWindow)
     albumLV.set(("Choose an artist",))
     albumList = DataListBox(mainWindow, conn, "albums", "name", sort_order=("name",))
-    # albumList.requery(12)
     albumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))
     albumList.config(border=2, relief='sunken')
-
-    # albumList.bind('<<ListboxSelect>>', get_songs)
     artistList.link(albumList, "artist")
 
     # ===== Songs Listbox =====
     songLV = tkinter.Variable(mainWindow)
     songLV.set(("Choose an album",))
     songList = DataListBox(mainWindow, conn, "songs", "title", ("track", "title"))
-    # songList.requery()
     songList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))
     songList.config(border=2, relief='sunken')
 
     albumList.link(songList, "album")
 
     # ===== Main loop =====
-    # testList = range(0, 100)
-    # albumLV.set(tuple(testList))
     mainWindow.mainloop()
     print("closing database connection")
     conn.close()
