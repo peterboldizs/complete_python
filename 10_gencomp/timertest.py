@@ -1,7 +1,7 @@
 import timeit
 from statistics import mean, stdev
 
-print("multiplication table 1")
+print("multiplication table - iteration")
 multi1 = """\
 for i in range(1, 11):
     for j in range(1, 11):
@@ -9,7 +9,7 @@ for i in range(1, 11):
 """
 
 print("-" * 40)
-print("multiplication table 2")
+print("multiplication table - comprehension")
 multi2 = """\
 m_table = [(i, j, i * j) for i in range(1, 11) for j in range(1, 11)]
 print(m_table)
