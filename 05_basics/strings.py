@@ -49,7 +49,7 @@ de_str5 = e_str5.decode('utf-8')
 print(type(de_str5))
 print(de_str5)
 
-str6 = "This is the beginning of a beautiful frienship"
+str6 = "This is the beginning of a beautiful friendship"
 print(str6[2:34:3])
 print(str6[::-1])
 
