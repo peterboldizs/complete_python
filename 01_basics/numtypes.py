@@ -5,7 +5,7 @@ from decimal import Decimal as D
 from fractions import Fraction
 
 print(sys.version)
-print("float_info", sys.float_info)
+print("bla bla float_info", sys.float_info)
 
 print(True and True)
 print(True and False)
