@@ -15,10 +15,10 @@ print(0xaa)
 
 print("binary converter")
 powers = []
-for i in range(15, -1, -1):
+for i in range(5, -1, -1):
     powers.append(2 ** i)
 
-# print(powers)
+print(powers)
 
 x = int(input("Enter a number (max:65535):"))
 print("{} in binary:".format(x))
