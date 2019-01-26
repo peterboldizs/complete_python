@@ -7,7 +7,7 @@ ages = [47, 46, 17, 16, 11]
 print("\nprint arrays")
 for pos in range(len(names)):
     # print(pos, names[pos][0])
-    print(pos, names[pos], ages[pos] + 1)
+    print(pos, names[pos], ages[pos] + 2)
 
 print("\nprint enumerate")
 for pos, name in enumerate(names):

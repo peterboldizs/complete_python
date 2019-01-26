@@ -26,7 +26,9 @@ num = 5
 mul = 8
 ans = 0
 
+print("num={}".format(num))
 for i in range(mul):
     ans += num
+    print("i={}, ans={}".format(i, ans))
 
 print(ans)

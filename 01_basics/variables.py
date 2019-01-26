@@ -1,13 +1,13 @@
 print("variables")
 greeting = "Good day"
-var1 = "qa"
-_var1 = "ws"
-var2 = 24
-var3 = 2
+strvar = "qa"
+_strvar = "ws"
+intvar = 24
+_intvar = 2
 # 1var = "we not good"
-print(var1 + ' ' + _var1)
-# print(var1 + ' ' + var2) not good
-print(var2 * var3)
+print(strvar + ' ' + _strvar)
+#print(strvar + ' ' + intvar) TypeError: Can't convert 'int' object to str implicitly
+print(intvar * _intvar)
 
 # now with input
 inp = input("please enter your name: ")

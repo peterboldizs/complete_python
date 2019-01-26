@@ -4,10 +4,11 @@ import sys
 from decimal import Decimal as D
 from fractions import Fraction
 
-print(sys.version)
-print(sys.platform)
-print("this is float_info", sys.float_info)
+print("sys.version: {}".format(sys.version))
+print("sys.platform: {}".format(sys.platform))
+print("sys.float_info: {}".format(sys.float_info))
 
+print("Boolean")
 print(True and True)
 print(True and False)
 print(True or False)

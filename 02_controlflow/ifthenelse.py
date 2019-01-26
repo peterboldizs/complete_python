@@ -1,4 +1,4 @@
-print("if-the-else")
+print("if-elif-else")
 late = False
 
 if late:
@@ -6,7 +6,7 @@ if late:
 else:
     print("do not call him")
 
-pay = 50000
+pay = int(input("Enter salary:"))
 
 if pay < 100:
     tax = 0.1
@@ -30,7 +30,7 @@ else:
 if 18 <= age < 31:
     print("welcome to the trip, {}".format(myname))
 else:
-    print("you cannot com to the trip")
+    print("you cannot come to the trip")
 
 if (age < 16) or (age > 65):
     print("free time")
